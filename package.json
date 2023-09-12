@@ -1,6 +1,6 @@
 {
   "name": "redux-state-manage",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Redux State Manage (RSM) is a solution for easy implements Redux in your project.",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
