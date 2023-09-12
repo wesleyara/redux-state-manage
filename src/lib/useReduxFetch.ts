@@ -21,7 +21,7 @@ export const useMutateFetch = (url: string, id: string, fn: any) => {
   }, []);
 };
 
-export const useReduxFetch = (id: string, url: string, fn: any) => {
+export const useReduxFetch = (url: string, id: string, fn: any) => {
   useMutateFetch(url, id, fn);
 
   const { data, error, isLoading } = useSelector((state: IState) =>
