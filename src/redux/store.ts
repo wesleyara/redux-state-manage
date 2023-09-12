@@ -1,9 +1,11 @@
 import { configureStore } from "@reduxjs/toolkit";
 
-import stateSlice from "./stateSlice";
+import requestsSlice from "./requestsSlice";
+import statesSlice from "./statesSlice";
 
 export default configureStore({
   reducer: {
-    states: stateSlice,
+    requests: requestsSlice,
+    states: statesSlice,
   },
 });

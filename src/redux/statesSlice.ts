@@ -6,8 +6,6 @@ export const slice = createSlice({
     data: {
       default: {
         data: null,
-        error: null,
-        isLoading: true,
       },
     },
   },
