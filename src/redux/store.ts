@@ -1,11 +1,11 @@
 import { configureStore } from "@reduxjs/toolkit";
 
-import requestsSlice from "./requestsSlice";
-import statesSlice from "./statesSlice";
+import fetchSlice from "./fetchSlice";
+import stateSlice from "./stateSlice";
 
 export default configureStore({
   reducer: {
-    requests: requestsSlice,
-    states: statesSlice,
+    fetch: fetchSlice,
+    state: stateSlice,
   },
 });

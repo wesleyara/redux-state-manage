@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 export const slice = createSlice({
-  name: "requests",
+  name: "fetch",
   initialState: {
     data: {
       default: {
@@ -12,7 +12,7 @@ export const slice = createSlice({
     },
   },
   reducers: {
-    setRequestState: (state: any, action) => {
+    setFetchState: (state: any, action) => {
       state.data[action.payload.id] = action.payload;
 
       return state;
@@ -20,6 +20,6 @@ export const slice = createSlice({
   },
 });
 
-export const { setRequestState } = slice.actions;
+export const { setFetchState } = slice.actions;
 
 export default slice.reducer;
