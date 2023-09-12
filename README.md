@@ -31,9 +31,48 @@ yarn add redux-state-manage
 
 Answer the questions (When choosing the tool, use the arrows keys to navigate, the spacebar to select and enter to finish)
 
-# 🛠️ Tools
+# 🛠️ Utilization
 
+For state handling, we will use `useReduxState` as a replacement for useState.
 
+```tsx
+import { useReduxState } from 'redux-state-manage';
+
+const App = () => {
+  const [state, useMutateState] = useReduxState('stateName', 'initialValue');
+
+  return (
+    <div>
+      <h1>{state}</h1>
+      <button onClick={() => useMutateState('stateName', 'new value')}>Change state</button>
+    </div>
+  );
+};
+```
+
+For fetching data, we will use `useReduxFetch` as a replacement for useEffect.
+
+```tsx
+import { useReduxFetch, useMutateFetch, fetcher } from 'redux-state-manage';
+
+const App = () => {
+  // the id is unique for each request
+  const { data, error, isLoading } = useReduxFetch(
+    "http://localhost:3333",
+    "data",
+    fetcher
+  );
+
+  return (
+    <div>
+      <h1>{data} - {error} - {isLoading}</h1>
+      <button onClick={() => useMutateFetch('http://localhost:3333', 'data', fetcher)}>Change data</button>
+    </div>
+  );
+};
+```
+
+The two main methods were inspired by `useState` and `SWR`, using redux as the state manager.
 
 # :pencil: Contributing
 
